@@ -32,7 +32,7 @@
 #include "singleton.h"
 #include "enumerators.h"
 #include "anim_card.h"
-#include "ZIPFile.h"
+#include "ZipFile.h"
 
 namespace arcomage {
 	class Text;

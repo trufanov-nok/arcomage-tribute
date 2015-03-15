@@ -23,7 +23,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 #include "ui_manager.h"
-#include "ZIPFile.h"
 
 namespace arcomage {
 
@@ -76,7 +75,7 @@ namespace arcomage {
 		Gamestate state,
 		bool visible)
 	{
-		images[boost::filesystem::path(path).filename()] = new Image(
+		images[boost::filesystem::path(path).filename().string()] = new Image(
 			x,
 			y,
 			Engine::getInstance()->loadImage(arch->unpackRaw(path)),

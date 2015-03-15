@@ -5,8 +5,6 @@
  *
  ******************************************************************************/
 
-#include "unzip.h"
-
 #if (!defined(_WIN32)) && (!defined(WIN32)) && (!defined(__APPLE__))
 #ifndef __USE_FILE_OFFSET64
 #define __USE_FILE_OFFSET64
@@ -50,7 +48,7 @@
 #endif
 
 
-#include "unzip.h"
+#include <minizip/unzip.h>
 
 #define CASESENSITIVITY (0)
 #define WRITEBUFFERSIZE (8192)

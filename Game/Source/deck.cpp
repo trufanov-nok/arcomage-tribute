@@ -32,7 +32,7 @@
 
 #include "utility.h"
 
-#include "ZIPFile.h"
+#include "ZipFile.h"
 
 namespace arcomage {
 
