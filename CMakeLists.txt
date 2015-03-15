@@ -10,6 +10,7 @@ INCLUDE(CheckIncludeFile)
 INCLUDE(CheckIncludeFileCXX)
 INCLUDE(CheckCCompilerFlag)
 INCLUDE(CheckCSourceCompiles)
+INCLUDE(FindPkgConfig)
 
 #------------------------------------------------------------------------------
 project(ArcomageTribute)

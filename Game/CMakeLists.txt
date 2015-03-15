@@ -43,6 +43,10 @@ add_executable(
    ${ArcomageTribute_SOURCES}
 ) 
 
+if (PKG_CONFIG_FOUND)
+        PKG_CHECK_MODULES(UNZIP minizip)
+endif (PKG_CONFIG_FOUND)
+
 target_link_libraries (
     ArcomageTribute
     ${Boost_LIBRARIES}
@@ -52,6 +56,7 @@ target_link_libraries (
     ${SDLMIXER_LIBRARY} 
     ${SDLMAIN_LIBRARY}
     ${LUA_LIBRARIES}
+    ${UNZIP_LIBRARIES}
    )
 
 
