@@ -29,7 +29,8 @@
 //------------------------------------------------------------------------------------------------------
 // Game Frame Rate
 #define FRAMES_PER_SECOND 30
-#define BOOST_FILESYSTEM_VERSION 2
+#define BOOST_FILESYSTEM_VERSION 3
+#define BOOST_FILESYSTEM_NO_DEPRECATED
 
 //------------------------------------------------------------------------------------------------------
 // General Defines to enhance readability

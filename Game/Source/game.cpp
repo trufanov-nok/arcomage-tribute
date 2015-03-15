@@ -172,18 +172,18 @@ namespace arcomage {
 			if(!boost::filesystem::exists(d_path))
 				Utility::getInstance()->
 					exitError(std::string("Failed to access directory: ").
-					append(d_path.directory_string()).c_str());
+					append(d_path.string()).c_str());
 
 			for (boost::filesystem::directory_iterator itr( d_path );
 				itr != end_itr;
 				++itr) {
-				if(Utility::getInstance()->getFileExtension(itr->leaf()) ==
+				if(Utility::getInstance()->getFileExtension(itr->path().filename().string()) ==
 					".deck") {
 					Ptr<Aeon::ZipFile> ptr =
 						Aeon::AeonCompress::createZipFile(boost::filesystem::
-						path(d_path/itr->leaf()).string(),
+						path(d_path/itr->path().filename()).string(),
 						Aeon::ZipMode::ZIP_CACHE_NONE);
-					deck_list.push_back(new DeckPreview(ptr, itr->leaf()));
+					deck_list.push_back(new DeckPreview(ptr, itr->path().filename().string()));
 
 				}
 			}
