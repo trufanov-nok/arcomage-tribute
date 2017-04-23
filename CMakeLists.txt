@@ -16,8 +16,6 @@ INCLUDE(FindPkgConfig)
 project(ArcomageTribute)
   
 cmake_minimum_required(VERSION 2.8)
-
  
 add_subdirectory(Game)
-# No Cmake files (yet)
-# add_subdirectory(Tools)
+add_subdirectory(Tools)

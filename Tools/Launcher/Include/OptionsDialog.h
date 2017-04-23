@@ -12,7 +12,7 @@ class OptionsDialog : public QDialog
 	Q_OBJECT
 
 public:
-	OptionsDialog(QWidget *parent = 0, Qt::WFlags flags = 0);
+    OptionsDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0);
 private slots:
 	void musicValue(int newVal);
 	void effectsValue(int newVal);

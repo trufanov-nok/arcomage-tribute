@@ -3,12 +3,14 @@
 #include <QDesktopServices>
 #include "OptionsDialog.h"
 #include <QProcess>
+#include <QDesktopWidget>
 
 // -----------------------------------------------------------------------------
-Launcher::Launcher(QWidget *parent, Qt::WFlags flags)
+Launcher::Launcher(QWidget *parent, Qt::WindowFlags flags)
 	: QMainWindow(parent,  flags)
 {
 	ui.setupUi(this);
+    ui.deckEditorButton->hide();
 	/*
 	QPixmap pixmap(":/Launcher/Resources/background.png");
 	QPalette p = ui.centralWidget->palette();
@@ -66,8 +68,8 @@ void Launcher::quitLauncher() {
 // -----------------------------------------------------------------------------
 void Launcher::startGame() {
 	QProcess proc(this);
-	proc.startDetached("ArcomageTribute.exe");
-	this->quitLauncher();
+    if (proc.startDetached("./ArcomageTribute"))
+        this->quitLauncher();
 }
 
 // -----------------------------------------------------------------------------

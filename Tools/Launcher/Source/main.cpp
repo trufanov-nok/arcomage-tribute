@@ -1,5 +1,5 @@
 #include "Launcher.h"
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "OptionsDialog.h"
 
 int main(int argc, char *argv[])

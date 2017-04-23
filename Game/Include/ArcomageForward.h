@@ -7,11 +7,13 @@
 #include <map>
 
 // Forward Declarations
+
 namespace arcomage {
 	class BaseAnimation;
 	class CardAnimation;
 	class AnimationListener;
 	class Card;
+        typedef std::vector<Card*> CardVector;
 	class Config;
 	class Deck;
 	class CPlayer;

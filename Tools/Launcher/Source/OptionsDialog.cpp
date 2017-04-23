@@ -3,7 +3,7 @@
 
 
 // -----------------------------------------------------------------------------
-OptionsDialog::OptionsDialog(QWidget *parent /* = 0 */, Qt::WFlags flags /* = 0 */)
+OptionsDialog::OptionsDialog(QWidget *parent /* = 0 */, Qt::WindowFlags flags /* = 0 */)
 		: QDialog(parent, flags), config(new ConfigFileCompat()) {
 	setWindowModality(Qt::ApplicationModal );
 	ui.setupUi(this);
