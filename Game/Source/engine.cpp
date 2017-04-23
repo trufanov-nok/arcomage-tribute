@@ -257,7 +257,7 @@ namespace arcomage {
 
 		if (configuration["audio enabled"]) {
 			Mix_VolumeMusic(configuration["music volume"]);
-			if (Mix_PlayMusic(music[track], loop ? 1 : 0) == -1) {
+            if (Mix_PlayMusic(music[track], loop ? -1 : 1) == -1) {
 				Utility::getInstance()->logMessage("audio_error.log",
 					Mix_GetError());
 			}

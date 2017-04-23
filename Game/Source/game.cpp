@@ -553,7 +553,7 @@ namespace arcomage {
 				"You won!");
 			UIManager::getInstance()->setText("Game Over Text",
 				"You have destroyed your opponent!");
-			Engine::getInstance()->playMusic("Victory"), false;
+            Engine::getInstance()->playMusic("Victory", false);
 			this->setGamestate(state_END);
 		}
 
@@ -572,7 +572,7 @@ namespace arcomage {
 					"You won!");
 				UIManager::getInstance()->setText("Game Over Text",
 					"You heave reached the resource limit!");
-				Engine::getInstance()->playMusic("Victory"), false;
+                Engine::getInstance()->playMusic("Victory", false);
 				this->setGamestate(state_END);
 			} else {
 				UIManager::getInstance()->setText("Game Over Title",
