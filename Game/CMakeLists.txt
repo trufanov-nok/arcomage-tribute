@@ -8,7 +8,9 @@
 
 # ------------------------------------------------------------------------------
 # Packages
+set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost REQUIRED COMPONENTS system filesystem regex thread )
+
 
 Find_Package ( SDL REQUIRED )
 Find_Package ( SDL_image REQUIRED )
@@ -16,7 +18,7 @@ Find_Package ( SDL_ttf REQUIRED )
 Find_Package ( SDL_mixer REQUIRED )
 find_package ( Lua51 REQUIRED )
 
-SET(CMAKE_BUILD_TYPE Debug)
+#SET(CMAKE_BUILD_TYPE Debug)
 
 
 # BOOST
