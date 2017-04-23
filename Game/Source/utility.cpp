@@ -36,6 +36,7 @@ namespace arcomage {
 	// log a message (one line) to a file
 	void Utility::logMessage(const char* filename, const char* msg)
 	{
+#ifdef LOGGING_ENABLED
 		char timestr[20];
 		time_t seconds = time(0);
 		struct tm* ptm = localtime(&seconds);
@@ -55,6 +56,7 @@ namespace arcomage {
 		std::cout << "[" << timestr << "]: " << msg << std::endl;
 
 		fclose(logfile);
+#endif
 	}
 
 	// -------------------------------------------------------------------------
