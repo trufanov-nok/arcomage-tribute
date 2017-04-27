@@ -18,7 +18,7 @@ OptionsDialog::OptionsDialog(QWidget *parent /* = 0 */, Qt::WindowFlags flags /*
 
 // -----------------------------------------------------------------------------
 void OptionsDialog::setupConfig() {
-	if(config && config->load("data/config.xml")) {
+    if(config && config->load("config.xml")) {
 		ui.checkAudio->setChecked(config->getValue("audio enabled"));
 		audioCheckBox();
 
@@ -30,7 +30,9 @@ void OptionsDialog::setupConfig() {
 
 		ui.checkFullscreen->setChecked(config->getValue("screen fullscreen"));
 		ui.checkSplash->setChecked(config->getValue("splash enabled"));
-	}
+    } else {
+
+    }
 }
 
 
@@ -61,7 +63,7 @@ void OptionsDialog::saveSettings() {
 		config->setValue("effects volume", ui.effectSlider->value());
 
 		// Store stuff
-		config->store("data/config.xml");
+        config->store("config.xml");
 	}
 
 	// Close window

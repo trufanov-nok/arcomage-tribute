@@ -68,8 +68,19 @@ void Launcher::quitLauncher() {
 // -----------------------------------------------------------------------------
 void Launcher::startGame() {
 	QProcess proc(this);
-    if (proc.startDetached("./ArcomageTribute"))
-        this->quitLauncher();
+    QDir dir;
+    if(dir.exists("/usr/share/games/ArcomageTribute/"))
+    {
+        if (proc.startDetached("ArcomageTribute", QStringList(), "/usr/share/games/ArcomageTribute/"))
+            this->quitLauncher();
+    }
+    else {
+
+        if (proc.startDetached("ArcomageTribute"))
+            this->quitLauncher();
+    }
+
+
 }
 
 // -----------------------------------------------------------------------------

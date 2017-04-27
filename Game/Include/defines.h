@@ -43,7 +43,7 @@
 
 #define BOOSTPATH(parm) boost::filesystem::path(parm).string().c_str()
 
-#define CONFIG BOOSTPATH("data/config.xml")
+#define CONFIG BOOSTPATH(".ArcomageTribute/data/config.xml")
 
 // Fonts
 #define KINGTHINGS BOOSTPATH("data/ttf/Kingthings_Exeter.ttf")

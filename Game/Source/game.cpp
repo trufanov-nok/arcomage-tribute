@@ -23,6 +23,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+#include <pwd.h>
+#include <sys/stat.h>
 #include "game.h"
 
 namespace arcomage {
@@ -42,8 +44,21 @@ namespace arcomage {
 	{
 		quit_game = false;
 
+        struct stat sb;
+        if (stat("/usr/share/games/ArcomageTribute/", &sb) == 0 && S_ISDIR(sb.st_mode))
+            chdir("/usr/share/games/ArcomageTribute/");
+
 		// Initialize Engine
-		Engine::getInstance()->init(CONFIG);
+        const char *homedir = getenv("HOME");
+        if (!homedir)
+        {
+            struct passwd *pw = getpwuid(getuid());
+            homedir = pw->pw_dir;
+        }
+        std::string fname(homedir);
+        if (!fname.empty() && fname.back() != '/')
+            fname.append("/");
+        Engine::getInstance()->init(fname.append(CONFIG).c_str());
 		Engine::getInstance()->setGame(this);
 
 		if (Engine::getInstance()->getIntroEnabled()) {
