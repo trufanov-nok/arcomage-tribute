@@ -71,7 +71,7 @@ namespace arcomage {
 	{
 
 		if (dest_attrib == "Tower") {
-			if (attributes["Tower"] + value <= attributes["Tower Limit"]) {
+            if (attributes["Tower"] + value < attributes["Tower Limit"]) {
 				int diff = attributes["Tower"] + value;
 				if (diff>0) {
 					attributes["Tower"] += value;
@@ -84,7 +84,7 @@ namespace arcomage {
 				this->status = game_TOWER_MAX;
 			}
 		} else if (dest_attrib == "Wall") {
-			if (attributes["Wall"] + value <= attributes["Wall Limit"]) {
+            if (attributes["Wall"] + value < attributes["Wall Limit"]) {
 				attributes["Wall"] += value;
 
 				if(attributes["Wall"] < 0)
