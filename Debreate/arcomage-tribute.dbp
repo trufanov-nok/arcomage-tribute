@@ -27,11 +27,11 @@ Description: Fan-made Tribute to the Arcomage Mini-Games - fantasy card-game fro
 <</CTRL>>
 <<FILES>>
 1
-/home/truf/dev/arcomage/data -> data -> /usr/share/games/ArcomageTribute/
-/home/truf/dev/arcomage/ArcomageTribute.desktop* -> ArcomageTribute.desktop -> /usr/share/app-install/desktop/
-/home/truf/dev/arcomage/ArcomageTribute.ico -> ArcomageTribute.ico -> /usr/share/app-install/icons/
-/home/truf/dev/arcomage/ArcomageTribute* -> ArcomageTribute -> /usr/games/
 /home/truf/dev/arcomage/ArcomageLauncher* -> ArcomageLauncher -> /usr/games/
+/home/truf/dev/arcomage/ArcomageTribute* -> ArcomageTribute -> /usr/games/
+/home/truf/dev/arcomage/ArcomageTribute.ico -> ArcomageTribute.ico -> /usr/share/app-install/icons/
+/home/truf/dev/arcomage/ArcomageTribute.desktop* -> ArcomageTribute.desktop -> /usr/share/app-install/desktop/
+/home/truf/dev/arcomage/data -> data -> /usr/share/games/ArcomageTribute/
 <</FILES>>
 <<SCRIPTS>>
 <<PREINST>>
@@ -128,19 +128,7 @@ UNLESS OTHERWISE MUTUALLY AGREED BY THE PARTIES IN WRITING, LICENSOR OFFERS THE 
    5. The rights granted under, and the subject matter referenced, in this License were drafted utilizing the terminology of the Berne Convention for the Protection of Literary and Artistic Works (as amended on September 28, 1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the WIPO Performances and Phonograms Treaty of 1996 and the Universal Copyright Convention (as revised on July 24, 1971). These rights and subject matter take effect in the relevant jurisdiction in which the License terms are sought to be enforced according to the corresponding provisions of the implementation of those treaty provisions in the applicable national law. If the standard suite of rights granted under applicable copyright law includes additional rights not granted under this License, such additional rights are deemed to be included in the License; this License is not intended to restrict the license of any rights under applicable law.
 <</COPYRIGHT>>
 <<MENU>>
-1
-Name=Fan-made tribute to the Arcomage Mini-Games
-Version=1.0
-Exec=/usr/games/ArcomageLauncher
-Comment=Fan-made tribute to the Arcomage Mini-Games
-Icon=/usr/share/app-install/icons/ArcomageTribute.ico
-Type=Application
-Terminal=false
-StartupNotify=false
-Encoding=UTF-8
-Categories=Game;LogicGame;
-GenericName=Arcomage Tribute
-Path=/usr/share/games/ArcomageTribute/
+0
 <</MENU>>
 <<BUILD>>
 1
