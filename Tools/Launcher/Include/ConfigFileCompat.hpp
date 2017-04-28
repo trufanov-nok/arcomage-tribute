@@ -31,9 +31,18 @@ public:
 
 	// -------------------------------------------------------------------------
 	void store(const std::string& file) {
-                QDir dir(QDir::homePath());
+            QString fname;
+            QDir dir(QDir::homePath());
+            if(dir.exists("/usr/share/games/ArcomageTribute/"))
+            {
+                // deb installation
                 dir.mkpath(".ArcomageTribute/data/");                
-                QString fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+                fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+            }
+            else {
+                // simple launch
+                fname = "data/";
+            }
                 std::ofstream out(fname.append(file.c_str()).toStdString());
 
 		out << "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" << std::endl << std::endl
@@ -61,9 +70,18 @@ public:
 	bool load(const std::string& file) {
 		SAXParser parser(this);
 
+                QString fname;
                 QDir dir(QDir::homePath());
-                dir.mkpath(".ArcomageTribute/data/");
-                QString fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+                if(dir.exists("/usr/share/games/ArcomageTribute/"))
+                {
+                    // deb installation
+                    dir.mkpath(".ArcomageTribute/data/");
+                    fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+                }
+                else {
+                    // simple launch
+                    fname = "data/";
+                }
 
 		try {
                         if (parser.parse(fname.append(file.c_str()).toStdString())) {

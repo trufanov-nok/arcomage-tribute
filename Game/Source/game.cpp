@@ -62,7 +62,7 @@ namespace arcomage {
 
          if (!boost::filesystem::exists(fname))
          {
-             fname = std::string("/data/config.xml");
+             fname = std::string("data/config.xml");
          }
 
         Engine::getInstance()->init(fname.c_str());
