@@ -15,7 +15,7 @@ static const std::string default_config( "<?xml version=\"1.0\" encoding=\"UTF-8
                                                  <screen x=\"1024\" y=\"768\" depth=\"32\" fullscreen=\"0\" /> \
                                                  <sound enabled=\"1\" />\
                                                  <audio rate=\"44100\" channels=\"2\" buffers=\"4096\" />\
-                                                 <effects volume=\"100\" />\
+                                                 <effects volume=\"15\" />\
                                                  <music volume=\"25\" />\
                                                  <intro display=\"1\" />\
                                          </Configuration>");
