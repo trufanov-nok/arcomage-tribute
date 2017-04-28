@@ -7,7 +7,7 @@ OptionsDialog::OptionsDialog(QWidget *parent /* = 0 */, Qt::WindowFlags flags /*
 		: QDialog(parent, flags), config(new ConfigFileCompat()) {
 	setWindowModality(Qt::ApplicationModal );
 	ui.setupUi(this);
-	setupConfig();
+    setupConfig();
 
 	connect(ui.effectSlider, SIGNAL(valueChanged(int)), this, SLOT(effectsValue(int)));
 	connect(ui.musicSlider, SIGNAL(valueChanged(int)), this, SLOT(musicValue(int)));

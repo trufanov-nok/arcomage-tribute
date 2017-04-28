@@ -21,7 +21,7 @@ private slots:
 private:
 	Ui::OptionsDialog ui;
 	ConfigFileCompat* config;
-	void setupConfig();
+    void setupConfig();
 
 };
 #endif

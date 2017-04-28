@@ -10,15 +10,15 @@
 
 #include <boost/lexical_cast.hpp>
 
-static const std::string default_config( "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?> \
-<Configuration>\
-\t<screen x=\"1024\" y=\"768\" depth=\"32\" fullscreen=\"0\" /> \
-\t<sound enabled=\"1\" />\
-\t<audio rate=\"44100\" channels=\"2\" buffers=\"4096\" />\
-\t<effects volume=\"100\" />\
-\t<music volume=\"25\" />\
-\t<intro display=\"1\" />\
-</Configuration>");
+static const std::string default_config( "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
+                                         <Configuration>\
+                                                 <screen x=\"1024\" y=\"768\" depth=\"32\" fullscreen=\"0\" /> \
+                                                 <sound enabled=\"1\" />\
+                                                 <audio rate=\"44100\" channels=\"2\" buffers=\"4096\" />\
+                                                 <effects volume=\"100\" />\
+                                                 <music volume=\"25\" />\
+                                                 <intro display=\"1\" />\
+                                         </Configuration>");
 
 using namespace Aeon;
 
@@ -73,8 +73,9 @@ public:
                            parser.parseString(default_config);
                            return true;
                         }
-		} catch(Aeon::SAXParserException& e) {
-			return false;
+		} catch(Aeon::SAXParserException& e) {                    
+                   parser.parseString(default_config);
+                   return true;
 		}
           return false;
 	}

@@ -26,6 +26,16 @@
 
 #include "config.h"
 
+static const std::string default_config( "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\
+                                         <Configuration>\
+                                                 <screen x=\"1024\" y=\"768\" depth=\"32\" fullscreen=\"0\" /> \
+                                                 <sound enabled=\"1\" />\
+                                                 <audio rate=\"44100\" channels=\"2\" buffers=\"4096\" />\
+                                                 <effects volume=\"100\" />\
+                                                 <music volume=\"25\" />\
+                                                 <intro display=\"1\" />\
+                                         </Configuration>");
+
 namespace arcomage {
 
 	// -------------------------------------------------------------------------
@@ -34,11 +44,12 @@ namespace arcomage {
 		const char* attribute,
 		const char* file)
 	{
-		TiXmlDocument doc(file);
+        TiXmlDocument doc(file);
 
-		if (!doc.LoadFile()) {
-			Utility::getInstance()->exitError("Failed to load config file");
-		}
+        if (!doc.LoadFile()) {
+        //Utility::getInstance()->exitError("Failed to load config file");
+        doc.Parse(default_config.c_str());
+        }
 		int val = 0;
 
 		TiXmlElement* root = doc.RootElement();
@@ -57,9 +68,10 @@ namespace arcomage {
 	{
 		TiXmlDocument doc(file);
 
-		if (!doc.LoadFile()) {
-			Utility::getInstance()->exitError("Failed to load config file");
-		}
+        if (!doc.LoadFile()) {
+        //Utility::getInstance()->exitError("Failed to load config file");
+        doc.Parse(default_config.c_str());
+        }
 		const char* temp;
 
 		TiXmlElement* root = doc.RootElement();
