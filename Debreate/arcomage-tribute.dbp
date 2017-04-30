@@ -27,11 +27,11 @@ Description: Fan-made Tribute to the Arcomage Mini-Games - fantasy card-game fro
 <</CTRL>>
 <<FILES>>
 1
-/home/truf/dev/arcomage/ArcomageLauncher* -> ArcomageLauncher -> /usr/games/
-/home/truf/dev/arcomage/ArcomageTribute* -> ArcomageTribute -> /usr/games/
-/home/truf/dev/arcomage/ArcomageTribute.ico -> ArcomageTribute.ico -> /usr/share/app-install/icons/
-/home/truf/dev/arcomage/ArcomageTribute.desktop* -> ArcomageTribute.desktop -> /usr/share/app-install/desktop/
 /home/truf/dev/arcomage/data -> data -> /usr/share/games/ArcomageTribute/
+/home/truf/dev/arcomage/ArcomageTribute* -> ArcomageTribute -> /usr/games/
+/home/truf/dev/arcomage/ArcomageLauncher* -> ArcomageLauncher -> /usr/games/
+/home/truf/dev/arcomage/ArcomageTribute.desktop -> ArcomageTribute.desktop -> /usr/share/applications/
+/home/truf/dev/arcomage/ArcomageLauncher.ico -> ArcomageLauncher.ico -> /usr/share/icons/hicolor/128x128/apps/
 <</FILES>>
 <<SCRIPTS>>
 <<PREINST>>

@@ -36,8 +36,8 @@ public:
             if(dir.exists("/usr/share/games/ArcomageTribute/"))
             {
                 // deb installation
-                dir.mkpath(".ArcomageTribute/data/");                
-                fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+                dir.mkpath(".config/ArcomageTribute/");
+                fname = QDir::cleanPath(dir.absolutePath()) + "/.config/ArcomageTribute/";
             }
             else {
                 // simple launch
@@ -75,8 +75,8 @@ public:
                 if(dir.exists("/usr/share/games/ArcomageTribute/"))
                 {
                     // deb installation
-                    dir.mkpath(".ArcomageTribute/data/");
-                    fname = QDir::cleanPath(dir.absolutePath()) + "/.ArcomageTribute/data/";
+                    dir.mkpath(".config/ArcomageTribute/");
+                    fname = QDir::cleanPath(dir.absolutePath()) + "/.config/ArcomageTribute/";
                 }
                 else {
                     // simple launch
